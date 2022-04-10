@@ -10,7 +10,7 @@ func main() {
 	router.GET("/example", func(c *gin.Context) {
 
 		c.JSON(200, gin.H{
-			"message": "example",
+			"message": "test-example",
 		}) // gin.H is a shortcut for map[string]interface{}
 	})
 	router.Run() // listen and serve on port 8080
