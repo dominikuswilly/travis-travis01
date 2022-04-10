@@ -17,6 +17,7 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
+      - runs-on : ubuntu-latest
       - restore_cache:
           keys:
             - go-mod-v4-{{ checksum "go.sum" }}
