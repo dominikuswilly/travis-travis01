@@ -13,5 +13,14 @@ func main() {
 			"message": "test-example",
 		}) // gin.H is a shortcut for map[string]interface{}
 	})
+
+	// A handler for GET request on /example
+	router.GET("/github-action", func(c *gin.Context) {
+
+		c.JSON(200, gin.H{
+			"message": "github-action",
+		}) // gin.H is a shortcut for map[string]interface{}
+	})
+
 	router.Run() // listen and serve on port 8080
 }
